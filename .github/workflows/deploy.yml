@@ -3,7 +3,7 @@ name: Deploy Jupyter Book
 on:
   push:
     branches:
-      - main   # Change if your default branch is 'master'
+      - main 
 
 permissions:
   contents: write

@@ -3,4 +3,4 @@ title: "Deep Learning Portfolio"
 author: "Rod Vincent"
 logo: ""
 execute:
-  execute_notebooks: off   # Don't re-run notebooks on build, just render
+  execute_notebooks: off   
