@@ -1,0 +1,7 @@
+format: jb-book
+root: intro
+
+chapters:
+- file: labs/lab1
+- file: exercises/exercise1
+- file: projects/project1
