@@ -1,13 +1,16 @@
 format: jb-book
 root: intro
 
-chapters:
-  - file: exercises/index
-    sections:
-      - glob: exercises/*.ipynb
-  - file: labs/index
-    sections:
-      - glob: labs/*.ipynb
-  - file: projects/index
-    sections:
-      - glob: projects/*.ipynb
+parts:
+  - caption: Labs
+    chapters:
+      - file: labs/Laboratory5_DelaVega
+        title: "Laboratory 5"
+
+  - caption: Exercises
+    chapters:
+      # Add exercises here once uploaded
+
+  - caption: Projects
+    chapters:
+      # Add projects here once uploaded
