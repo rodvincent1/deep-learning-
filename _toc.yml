@@ -1,15 +1,13 @@
 format: jb-book
 root: intro
 
-parts:
-  - caption: Labs
-    chapters:
-      - file: labs/Laboratory5
-
-  - caption: Exercises
-    chapters:
-      - file: exercises/exercise1
-
-  - caption: Projects
-    chapters:
-      - file: projects/project1
+chapters:
+  - file: exercises/index
+    sections:
+      - glob: exercises/*.ipynb
+  - file: labs/index
+    sections:
+      - glob: labs/*.ipynb
+  - file: projects/index
+    sections:
+      - glob: projects/*.ipynb
