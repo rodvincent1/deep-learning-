@@ -1,7 +1,15 @@
 format: jb-book
 root: intro
 
-chapters:
-- file: labs/laboratory5
-- file: exercises/exercise1
-- file: projects/project1
+parts:
+  - caption: Labs
+    chapters:
+      - file: labs/Laboratory5
+
+  - caption: Exercises
+    chapters:
+      - file: exercises/exercise1
+
+  - caption: Projects
+    chapters:
+      - file: projects/project1
