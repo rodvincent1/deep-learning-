@@ -5,15 +5,14 @@ parts:
   - caption: Labs
     chapters:
       - file: labs/index
-      - file: labs/Laboratory5_DelaVega
-        title: "Laboratory 5"
+      - glob: labs/*.ipynb
 
   - caption: Exercises
     chapters:
       - file: exercises/index
-      # future exercises auto go here
+      - glob: exercises/*.ipynb
 
   - caption: Projects
     chapters:
       - file: projects/index
-      # future projects auto go here
+      - glob: projects/*.ipynb
