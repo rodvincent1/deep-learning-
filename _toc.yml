@@ -5,7 +5,7 @@ parts:
   - caption: Labs
     chapters:
       - file: labs/index
-      - file: labs/Laboratory1_DelaVega
+      - file: labs/Laboratory1
         title: "Laboratory 1"
       - file: labs/Laboratory2_DelaVega
         title: "Laboratory 2"
@@ -19,9 +19,9 @@ parts:
   - caption: Exercises
     chapters:
       - file: exercises/index
-      # Add future exercises here (e.g., exercises/exercise1)
+      
 
   - caption: Projects
     chapters:
       - file: projects/index
-      # Add future projects here (e.g., projects/project1)
+
