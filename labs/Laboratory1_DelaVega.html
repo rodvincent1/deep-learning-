@@ -57,11 +57,11 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'labs/Laboratory5_DelaVega';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'labs/Laboratory1_DelaVega';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Exercises" href="../exercises/index.html" />
-    <link rel="prev" title="&lt;no title&gt;" href="Laboratory1_DelaVega.html" />
+    <link rel="next" title="&lt;no title&gt;" href="Laboratory5_DelaVega.html" />
+    <link rel="prev" title="Labs" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -238,7 +238,7 @@
       
       
       
-      <li><a href="../_sources/labs/Laboratory5_DelaVega.ipynb" target="_blank"
+      <li><a href="../_sources/labs/Laboratory1_DelaVega.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -346,178 +346,27 @@ document.write(`
                   
   <p>ROD VINCENT DELA VEGA</p>
 <p>DS4A</p>
-<p>Laboratory Task 5</p>
+<p>Laboratory Task 1</p>
+<p>#Descriptive Analytics</p>
 <ol class="arabic simple">
-<li><p>Perform Standard Imports</p></li>
-<li><p>Create a function called set_seed() that accepts seed: int as a parameter, this function must return nothing but just set the seed to a certain value.</p></li>
-<li><p>Create a NumPy array called “arr” that contains 6 random integers between 0 (inclusive) and 5 (exclusive), call the set_seed() function and use 42 as the seed parameter.</p></li>
-<li><p>Create a tensor “x” from the array above</p></li>
-<li><p>Change the dtype of x from int32 to int64</p></li>
-<li><p>Reshape x into a 3x2 tensor
-There are several ways to do this.</p></li>
-<li><p>Return the right-hand column of tensor x</p></li>
-<li><p>Without changing x, return a tensor of square values of x
-There are several ways to do this.</p></li>
-<li><p>Create a tensor y with the same number of elements as x, that can be matrix-multiplied with x
-Use PyTorch directly (not NumPy) to create a tensor of random integers between 0 (inclusive) and 5 (exclusive). Use 42 as seed.
-Think about what shape it should have to permit matrix multiplication.</p></li>
-<li><p>Find the matrix product of x and y.</p></li>
+<li><p>How many vaccine doses were distributed to each region during the past month?</p></li>
+<li><p>What was the average vaccination rate per day over the last two weeks?</p></li>
 </ol>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1 Perform Standard Imports</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 2. Create a function called set_seed()</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">set_seed</span><span class="p">(</span><span class="n">seed</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
-    <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
-    <span class="n">torch</span><span class="o">.</span><span class="n">manual_seed</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
-    <span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 3. Create NumPy array &quot;arr&quot; with random integers between 0 and 5</span>
-<span class="n">set_seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
-<span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int64</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;NumPy array:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">arr</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>NumPy array:
- [3 4 2 4 4 1]
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 4. Create tensor &quot;x&quot; from the array above</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">from_numpy</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Tensor x:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;dtype:&quot;</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tensor x:
- tensor([3, 4, 2, 4, 4, 1])
-dtype: torch.int64
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 5. Change dtype of x from int64 to int64 (already int64, but safe to enforce)</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">long</span><span class="p">()</span>  <span class="c1"># or x = x.type(torch.int64)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Tensor x (int64):</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;dtype:&quot;</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tensor x (int64):
- tensor([3, 4, 2, 4, 4, 1])
-dtype: torch.int64
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 6. Reshape x into a 3x2 tensor</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Tensor x reshaped (3x2):</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tensor x reshaped (3x2):
- tensor([[3, 4],
-        [2, 4],
-        [4, 1]])
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 7. Return the right-hand column of tensor x</span>
-<span class="n">right_col</span> <span class="o">=</span> <span class="n">x</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Right-hand column:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">right_col</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Right-hand column:
- tensor([4, 4, 1])
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 8. Without changing x, return a tensor of square values of x</span>
-<span class="n">squared</span> <span class="o">=</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Squared values of x:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">squared</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Squared values of x:
- tensor([[ 9, 16],
-        [ 4, 16],
-        [16,  1]])
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 9. Create tensor y with same num of elements as x that can be matrix-multiplied</span>
-<span class="n">set_seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">int64</span><span class="p">)</span>  <span class="c1"># Match dtype with x</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Tensor y (2x3):</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tensor y (2x3):
- tensor([[2, 2, 1],
-        [4, 1, 0]])
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 10. Matrix product of x and y</span>
-<span class="n">matmul_result</span> <span class="o">=</span> <span class="n">x</span> <span class="o">@</span> <span class="n">y</span>  <span class="c1"># or torch.mm(x, y)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Matrix product (x @ y):</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">matmul_result</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matrix product (x @ y):
- tensor([[22, 10,  3],
-        [20,  8,  2],
-        [12,  9,  4]])
-</pre></div>
-</div>
-</div>
-</div>
+<p>#Diagnostic Analytics</p>
+<ol class="arabic simple">
+<li><p>Why did vaccine distribution slow down in certain provinces last month?</p></li>
+<li><p>What factors contributed to the decline in vaccination turnout in urban areas?</p></li>
+</ol>
+<p>#Predictive Analytics</p>
+<ol class="arabic simple">
+<li><p>How many vaccine doses will be needed in the next two weeks based on infection trends?</p></li>
+<li><p>What is the projected infection rate if the vaccination campaign continues at the current pace?</p></li>
+</ol>
+<p>#Prescriptive Analytics</p>
+<ol class="arabic simple">
+<li><p>If vaccine demand rises by 20%, how should production be adjusted to meet the target supply?</p></li>
+<li><p>What distribution strategy should be implemented to ensure vaccines reach high-risk areas efficiently?</p></li>
+</ol>
 
     <script type="text/x-thebe-config">
     {
@@ -550,20 +399,20 @@ dtype: torch.int64
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="Laboratory1_DelaVega.html"
+       href="index.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">&lt;no title&gt;</p>
+        <p class="prev-next-title">Labs</p>
       </div>
     </a>
     <a class="right-next"
-       href="../exercises/index.html"
+       href="Laboratory5_DelaVega.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Exercises</p>
+        <p class="prev-next-title">&lt;no title&gt;</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
