@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>&lt;no title&gt; &#8212; Deep Learning Portfolio</title>
+    <title>Laboratory 4 &#8212; Deep Learning Portfolio</title>
   
   
   
@@ -57,11 +57,11 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'labs/Laboratory5_DelaVega';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'labs/Laboratory4_DelaVega';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Exercises" href="../exercises/index.html" />
-    <link rel="prev" title="Laboratory 4" href="Laboratory4_DelaVega.html" />
+    <link rel="next" title="&lt;no title&gt;" href="Laboratory5_DelaVega.html" />
+    <link rel="prev" title="Laboratory 3" href="Laboratory3_DelaVega.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -174,11 +174,11 @@
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Labs</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="index.html">Labs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Laboratory2_DelaVega.html">Laboratory 2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Laboratory3_DelaVega.html">Laboratory 3</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Laboratory4_DelaVega.html">Laboratory 4</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Laboratory 4</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Exercises</span></p>
 <ul class="nav bd-sidenav">
@@ -241,7 +241,7 @@
       
       
       
-      <li><a href="../_sources/labs/Laboratory5_DelaVega.ipynb" target="_blank"
+      <li><a href="../_sources/labs/Laboratory4_DelaVega.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -325,7 +325,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1><no title></h1>
+    <h1>Laboratory 4</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -334,9 +334,10 @@ document.write(`
                 <h2> Contents </h2>
             </div>
             <nav aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objective"><strong>Objective</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#result-summary"><strong>Result Summary</strong></a></li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -347,180 +348,144 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <p>ROD VINCENT DELA VEGA</p>
-<p>DS4A</p>
-<p>Laboratory Task 5</p>
-<ol class="arabic simple">
-<li><p>Perform Standard Imports</p></li>
-<li><p>Create a function called set_seed() that accepts seed: int as a parameter, this function must return nothing but just set the seed to a certain value.</p></li>
-<li><p>Create a NumPy array called “arr” that contains 6 random integers between 0 (inclusive) and 5 (exclusive), call the set_seed() function and use 42 as the seed parameter.</p></li>
-<li><p>Create a tensor “x” from the array above</p></li>
-<li><p>Change the dtype of x from int32 to int64</p></li>
-<li><p>Reshape x into a 3x2 tensor
-There are several ways to do this.</p></li>
-<li><p>Return the right-hand column of tensor x</p></li>
-<li><p>Without changing x, return a tensor of square values of x
-There are several ways to do this.</p></li>
-<li><p>Create a tensor y with the same number of elements as x, that can be matrix-multiplied with x
-Use PyTorch directly (not NumPy) to create a tensor of random integers between 0 (inclusive) and 5 (exclusive). Use 42 as seed.
-Think about what shape it should have to permit matrix multiplication.</p></li>
-<li><p>Find the matrix product of x and y.</p></li>
-</ol>
+  <section class="tex2jax_ignore mathjax_ignore" id="laboratory-4">
+<h1>Laboratory 4<a class="headerlink" href="#laboratory-4" title="Link to this heading">#</a></h1>
+<p><strong>Name:</strong> Rod Vincent Dela Vega</p>
+<p><strong>Section:</strong> DS4A</p>
+<p><strong>Task:</strong> Train a linear regression model in PyTorch using a regression dataset.</p>
+<hr class="docutils" />
+<section id="objective">
+<h2><strong>Objective</strong><a class="headerlink" href="#objective" title="Link to this heading">#</a></h2>
+<p>To train a simple linear regression model using PyTorch with the following parameters:</p>
+<ul class="simple">
+<li><p><strong>Criterion:</strong> MSE Loss</p></li>
+<li><p><strong>Fully Connected Layers:</strong> 2</p></li>
+<li><p><strong>Batch Size:</strong> 8</p></li>
+<li><p><strong>Optimizer:</strong> SGD</p></li>
+<li><p><strong>Epochs:</strong> 1000</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1 Perform Standard Imports</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch.nn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nn</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch.optim</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">optim</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">torch.utils.data</span><span class="w"> </span><span class="kn">import</span> <span class="n">DataLoader</span><span class="p">,</span> <span class="n">TensorDataset</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.datasets</span><span class="w"> </span><span class="kn">import</span> <span class="n">make_regression</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="c1"># Generate a synthetic regression dataset</span>
+<span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">make_regression</span><span class="p">(</span><span class="n">n_samples</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">n_features</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">noise</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Create DataLoader</span>
+<span class="n">batch_size</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">TensorDataset</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">loader</span> <span class="o">=</span> <span class="n">DataLoader</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="n">batch_size</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 2. Create a function called set_seed()</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">set_seed</span><span class="p">(</span><span class="n">seed</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
-    <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
-    <span class="n">torch</span><span class="o">.</span><span class="n">manual_seed</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
-    <span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 3. Create NumPy array &quot;arr&quot; with random integers between 0 and 5</span>
-<span class="n">set_seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
-<span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int64</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;NumPy array:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">arr</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="c1"># Define a simple Linear Regression model with 2 fully connected layers</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">LinearRegressionModel</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">LinearRegressionModel</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fc1</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>  <span class="c1"># First fully connected layer</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fc2</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># Second fully connected layer</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fc1</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fc2</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">x</span>
+
+<span class="c1"># Initialize model</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">LinearRegressionModel</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>NumPy array:
- [3 4 2 4 4 1]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>LinearRegressionModel(
+  (fc1): Linear(in_features=1, out_features=10, bias=True)
+  (fc2): Linear(in_features=10, out_features=1, bias=True)
+)
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 4. Create tensor &quot;x&quot; from the array above</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">from_numpy</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Tensor x:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;dtype:&quot;</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tensor x:
- tensor([3, 4, 2, 4, 4, 1])
-dtype: torch.int64
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="c1"># Define criterion and optimizer</span>
+<span class="n">criterion</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">MSELoss</span><span class="p">()</span>
+<span class="n">optimizer</span> <span class="o">=</span> <span class="n">optim</span><span class="o">.</span><span class="n">SGD</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">parameters</span><span class="p">(),</span> <span class="n">lr</span><span class="o">=</span><span class="mf">0.01</span><span class="p">)</span>
+<span class="n">epochs</span> <span class="o">=</span> <span class="mi">1000</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 5. Change dtype of x from int64 to int64 (already int64, but safe to enforce)</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">long</span><span class="p">()</span>  <span class="c1"># or x = x.type(torch.int64)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Tensor x (int64):</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;dtype:&quot;</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="n">losses</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">epoch</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">epochs</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">batch_x</span><span class="p">,</span> <span class="n">batch_y</span> <span class="ow">in</span> <span class="n">loader</span><span class="p">:</span>
+        <span class="c1"># Forward pass</span>
+        <span class="n">outputs</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span><span class="n">batch_x</span><span class="p">)</span>
+        <span class="n">loss</span> <span class="o">=</span> <span class="n">criterion</span><span class="p">(</span><span class="n">outputs</span><span class="p">,</span> <span class="n">batch_y</span><span class="p">)</span>
+
+        <span class="c1"># Backward pass</span>
+        <span class="n">optimizer</span><span class="o">.</span><span class="n">zero_grad</span><span class="p">()</span>
+        <span class="n">loss</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
+        <span class="n">optimizer</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>
+
+    <span class="c1"># Record loss</span>
+    <span class="n">losses</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">loss</span><span class="o">.</span><span class="n">item</span><span class="p">())</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">epoch</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">100</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Epoch [</span><span class="si">{</span><span class="n">epoch</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">epochs</span><span class="si">}</span><span class="s2">], Loss: </span><span class="si">{</span><span class="n">loss</span><span class="o">.</span><span class="n">item</span><span class="p">()</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Plot loss curve</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">losses</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Training Loss Curve&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Epochs&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Loss&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tensor x (int64):
- tensor([3, 4, 2, 4, 4, 1])
-dtype: torch.int64
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Epoch [100/1000], Loss: 3017.1194
+Epoch [200/1000], Loss: 1081.0156
+Epoch [300/1000], Loss: 5220.8496
+Epoch [400/1000], Loss: 6080.3564
+Epoch [500/1000], Loss: 1448.4404
+Epoch [600/1000], Loss: 402.0056
+Epoch [700/1000], Loss: 6383.4424
+Epoch [800/1000], Loss: 2988.1785
+Epoch [900/1000], Loss: 1413.0972
+Epoch [1000/1000], Loss: 329.4062
 </pre></div>
 </div>
+<img alt="../_images/6f6b84eb93d1c9286888e66710d991a67516c78147159633be1d3e1a6adc3482.png" src="../_images/6f6b84eb93d1c9286888e66710d991a67516c78147159633be1d3e1a6adc3482.png" />
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 6. Reshape x into a 3x2 tensor</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Tensor x reshaped (3x2):</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tensor x reshaped (3x2):
- tensor([[3, 4],
-        [2, 4],
-        [4, 1]])
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 7. Return the right-hand column of tensor x</span>
-<span class="n">right_col</span> <span class="o">=</span> <span class="n">x</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Right-hand column:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">right_col</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Right-hand column:
- tensor([4, 4, 1])
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 8. Without changing x, return a tensor of square values of x</span>
-<span class="n">squared</span> <span class="o">=</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Squared values of x:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">squared</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Squared values of x:
- tensor([[ 9, 16],
-        [ 4, 16],
-        [16,  1]])
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 9. Create tensor y with same num of elements as x that can be matrix-multiplied</span>
-<span class="n">set_seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">int64</span><span class="p">)</span>  <span class="c1"># Match dtype with x</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Tensor y (2x3):</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tensor y (2x3):
- tensor([[2, 2, 1],
-        [4, 1, 0]])
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 10. Matrix product of x and y</span>
-<span class="n">matmul_result</span> <span class="o">=</span> <span class="n">x</span> <span class="o">@</span> <span class="n">y</span>  <span class="c1"># or torch.mm(x, y)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Matrix product (x @ y):</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">matmul_result</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matrix product (x @ y):
- tensor([[22, 10,  3],
-        [20,  8,  2],
-        [12,  9,  4]])
-</pre></div>
-</div>
-</div>
-</div>
+</section>
+<section id="result-summary">
+<h2><strong>Result Summary</strong><a class="headerlink" href="#result-summary" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>The model was trained successfully using <strong>MSE Loss</strong> and <strong>SGD optimizer</strong>.</p></li>
+<li><p>Two fully connected layers were used with ReLU activation.</p></li>
+<li><p>The training loss gradually decreased over 1000 epochs, showing that the model learned the regression relationship.</p></li>
+</ul>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -553,20 +518,20 @@ dtype: torch.int64
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="Laboratory4_DelaVega.html"
+       href="Laboratory3_DelaVega.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Laboratory 4</p>
+        <p class="prev-next-title">Laboratory 3</p>
       </div>
     </a>
     <a class="right-next"
-       href="../exercises/index.html"
+       href="Laboratory5_DelaVega.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Exercises</p>
+        <p class="prev-next-title">&lt;no title&gt;</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -585,9 +550,10 @@ dtype: torch.int64
     <i class="fa-solid fa-list"></i> Contents
   </div>
   <nav class="bd-toc-nav page-toc">
-    <ul class="simple visible nav section-nav flex-column">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objective"><strong>Objective</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#result-summary"><strong>Result Summary</strong></a></li>
 </ul>
-
   </nav></div>
 
 </div></div>

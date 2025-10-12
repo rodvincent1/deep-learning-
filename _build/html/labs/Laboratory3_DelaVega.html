@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>&lt;no title&gt; &#8212; Deep Learning Portfolio</title>
+    <title>Laboratory 3 &#8212; Deep Learning Portfolio</title>
   
   
   
@@ -57,11 +57,11 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'labs/Laboratory5_DelaVega';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'labs/Laboratory3_DelaVega';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Exercises" href="../exercises/index.html" />
-    <link rel="prev" title="Laboratory 4" href="Laboratory4_DelaVega.html" />
+    <link rel="next" title="Laboratory 4" href="Laboratory4_DelaVega.html" />
+    <link rel="prev" title="Laboratory 2" href="Laboratory2_DelaVega.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -174,10 +174,10 @@
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Labs</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="index.html">Labs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Laboratory2_DelaVega.html">Laboratory 2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Laboratory3_DelaVega.html">Laboratory 3</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Laboratory 3</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Laboratory4_DelaVega.html">Laboratory 4</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Exercises</span></p>
@@ -241,7 +241,7 @@
       
       
       
-      <li><a href="../_sources/labs/Laboratory5_DelaVega.ipynb" target="_blank"
+      <li><a href="../_sources/labs/Laboratory3_DelaVega.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -325,7 +325,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1><no title></h1>
+    <h1>Laboratory 3</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -334,9 +334,11 @@ document.write(`
                 <h2> Contents </h2>
             </div>
             <nav aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objective"><strong>Objective</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#given-data"><strong>Given Data</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#result-summary"><strong>Result Summary</strong></a></li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -347,180 +349,153 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <p>ROD VINCENT DELA VEGA</p>
-<p>DS4A</p>
-<p>Laboratory Task 5</p>
-<ol class="arabic simple">
-<li><p>Perform Standard Imports</p></li>
-<li><p>Create a function called set_seed() that accepts seed: int as a parameter, this function must return nothing but just set the seed to a certain value.</p></li>
-<li><p>Create a NumPy array called “arr” that contains 6 random integers between 0 (inclusive) and 5 (exclusive), call the set_seed() function and use 42 as the seed parameter.</p></li>
-<li><p>Create a tensor “x” from the array above</p></li>
-<li><p>Change the dtype of x from int32 to int64</p></li>
-<li><p>Reshape x into a 3x2 tensor
-There are several ways to do this.</p></li>
-<li><p>Return the right-hand column of tensor x</p></li>
-<li><p>Without changing x, return a tensor of square values of x
-There are several ways to do this.</p></li>
-<li><p>Create a tensor y with the same number of elements as x, that can be matrix-multiplied with x
-Use PyTorch directly (not NumPy) to create a tensor of random integers between 0 (inclusive) and 5 (exclusive). Use 42 as seed.
-Think about what shape it should have to permit matrix multiplication.</p></li>
-<li><p>Find the matrix product of x and y.</p></li>
-</ol>
+  <section class="tex2jax_ignore mathjax_ignore" id="laboratory-3">
+<h1>Laboratory 3<a class="headerlink" href="#laboratory-3" title="Link to this heading">#</a></h1>
+<p><strong>Name:</strong> Rod Vincent Dela Vega</p>
+<p><strong>Section:</strong> DS4A</p>
+<p><strong>Task:</strong> Perform a forward and backward propagation in Python using the inputs from Laboratory Task 2</p>
+<hr class="docutils" />
+<section id="objective">
+<h2><strong>Objective</strong><a class="headerlink" href="#objective" title="Link to this heading">#</a></h2>
+<p>To perform both forward and backward propagation in a simple neural network using ReLU as the activation function and update the weights accordingly.</p>
+</section>
+<section id="given-data">
+<h2><strong>Given Data</strong><a class="headerlink" href="#given-data" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">lr</span> <span class="o">=</span> <span class="mf">0.001</span>
+</pre></div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1 Perform Standard Imports</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+
+<span class="c1"># Input and target</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Learning rate</span>
+<span class="n">lr</span> <span class="o">=</span> <span class="mf">0.001</span>
+
+<span class="c1"># Initialize weights (same as Laboratory 2)</span>
+<span class="n">W1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">0.2</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.3</span><span class="p">],</span>
+               <span class="p">[</span><span class="mf">0.4</span><span class="p">,</span>  <span class="mf">0.1</span><span class="p">],</span>
+               <span class="p">[</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span>  <span class="mf">0.2</span><span class="p">]])</span>
+
+<span class="n">W2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="o">-</span><span class="mf">0.3</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.2</span><span class="p">]])</span>
+
+<span class="c1"># Biases</span>
+<span class="n">theta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="o">-</span><span class="mf">0.4</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.2</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.1</span><span class="p">]])</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 2. Create a function called set_seed()</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">set_seed</span><span class="p">(</span><span class="n">seed</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
-    <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
-    <span class="n">torch</span><span class="o">.</span><span class="n">manual_seed</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
-    <span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 3. Create NumPy array &quot;arr&quot; with random integers between 0 and 5</span>
-<span class="n">set_seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
-<span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int64</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;NumPy array:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">arr</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="c1"># Forward Propagation</span>
+
+<span class="c1"># Hidden layer linear combination</span>
+<span class="n">Z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">W1</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">theta</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>
+
+<span class="c1"># ReLU activation</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">maximum</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">Z</span><span class="p">)</span>
+
+<span class="c1"># Output layer (no activation, linear output)</span>
+<span class="n">y_hat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">W2</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+
+<span class="c1"># Compute loss (mean squared error)</span>
+<span class="n">E</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">y</span> <span class="o">-</span> <span class="n">y_hat</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hidden Input (Z):</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">Z</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Activated Output (f):</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Predicted Output (y_hat):</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">y_hat</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Error (E):</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">E</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>NumPy array:
- [3 4 2 4 4 1]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hidden Input (Z):
+ [[-0.7]
+ [ 0.1]]
+
+Activated Output (f):
+ [[0. ]
+ [0.1]]
+
+Predicted Output (y_hat):
+ [[-0.02]]
+
+Error (E):
+ [[0.5202]]
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 4. Create tensor &quot;x&quot; from the array above</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">from_numpy</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Tensor x:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;dtype:&quot;</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="c1"># Backward Propagation</span>
+
+<span class="c1"># Derivative of error w.r.t output</span>
+<span class="n">dE_dyhat</span> <span class="o">=</span> <span class="o">-</span><span class="p">(</span><span class="n">y</span> <span class="o">-</span> <span class="n">y_hat</span><span class="p">)</span>
+
+<span class="c1"># Gradient for W2</span>
+<span class="n">dE_dW2</span> <span class="o">=</span> <span class="n">dE_dyhat</span> <span class="o">*</span> <span class="n">f</span><span class="o">.</span><span class="n">T</span>
+
+<span class="c1"># Gradient for hidden layer</span>
+<span class="n">dE_df</span> <span class="o">=</span> <span class="n">dE_dyhat</span> <span class="o">*</span> <span class="n">W2</span>
+
+<span class="c1"># ReLU derivative (0 if Z &lt;= 0 else 1)</span>
+<span class="n">dReLU</span> <span class="o">=</span> <span class="p">(</span><span class="n">Z</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+
+<span class="c1"># Chain rule to get gradient for W1</span>
+<span class="n">dE_dZ</span> <span class="o">=</span> <span class="n">dE_df</span><span class="o">.</span><span class="n">T</span> <span class="o">*</span> <span class="n">dReLU</span>
+<span class="n">dE_dW1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">dE_dZ</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+
+<span class="c1"># Weight Updates</span>
+<span class="n">W2_new</span> <span class="o">=</span> <span class="n">W2</span> <span class="o">-</span> <span class="n">lr</span> <span class="o">*</span> <span class="n">dE_dW2</span>
+<span class="n">W1_new</span> <span class="o">=</span> <span class="n">W1</span> <span class="o">-</span> <span class="n">lr</span> <span class="o">*</span> <span class="n">dE_dW1</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Gradient for W2:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">dE_dW2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Gradient for W1:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">dE_dW1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Updated W2:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">W2_new</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Updated W1:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">W1_new</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tensor x:
- tensor([3, 4, 2, 4, 4, 1])
-dtype: torch.int64
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gradient for W2:
+ [[-0.    -0.102]]
+
+Gradient for W1:
+ [[0.    0.204]
+ [0.    0.   ]
+ [0.    0.204]]
+
+Updated W2:
+ [[-0.3      -0.199898]]
+
+Updated W1:
+ [[ 0.2      -0.300204]
+ [ 0.4       0.1     ]
+ [-0.5       0.199796]]
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 5. Change dtype of x from int64 to int64 (already int64, but safe to enforce)</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">long</span><span class="p">()</span>  <span class="c1"># or x = x.type(torch.int64)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Tensor x (int64):</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;dtype:&quot;</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tensor x (int64):
- tensor([3, 4, 2, 4, 4, 1])
-dtype: torch.int64
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 6. Reshape x into a 3x2 tensor</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Tensor x reshaped (3x2):</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tensor x reshaped (3x2):
- tensor([[3, 4],
-        [2, 4],
-        [4, 1]])
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 7. Return the right-hand column of tensor x</span>
-<span class="n">right_col</span> <span class="o">=</span> <span class="n">x</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Right-hand column:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">right_col</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Right-hand column:
- tensor([4, 4, 1])
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 8. Without changing x, return a tensor of square values of x</span>
-<span class="n">squared</span> <span class="o">=</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Squared values of x:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">squared</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Squared values of x:
- tensor([[ 9, 16],
-        [ 4, 16],
-        [16,  1]])
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 9. Create tensor y with same num of elements as x that can be matrix-multiplied</span>
-<span class="n">set_seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">int64</span><span class="p">)</span>  <span class="c1"># Match dtype with x</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Tensor y (2x3):</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tensor y (2x3):
- tensor([[2, 2, 1],
-        [4, 1, 0]])
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 10. Matrix product of x and y</span>
-<span class="n">matmul_result</span> <span class="o">=</span> <span class="n">x</span> <span class="o">@</span> <span class="n">y</span>  <span class="c1"># or torch.mm(x, y)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Matrix product (x @ y):</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">matmul_result</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matrix product (x @ y):
- tensor([[22, 10,  3],
-        [20,  8,  2],
-        [12,  9,  4]])
-</pre></div>
-</div>
-</div>
-</div>
+</section>
+<section id="result-summary">
+<h2><strong>Result Summary</strong><a class="headerlink" href="#result-summary" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Forward Propagation:</strong> Computed the network output and error.</p></li>
+<li><p><strong>Backward Propagation:</strong> Calculated gradients for each weight using the chain rule.</p></li>
+<li><p><strong>Weight Update:</strong> Adjusted weights using the learning rate (lr = 0.001).</p></li>
+</ul>
+<p>This demonstrates how the network learns by minimizing error through gradient descent.</p>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -553,20 +528,20 @@ dtype: torch.int64
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="Laboratory4_DelaVega.html"
+       href="Laboratory2_DelaVega.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Laboratory 4</p>
+        <p class="prev-next-title">Laboratory 2</p>
       </div>
     </a>
     <a class="right-next"
-       href="../exercises/index.html"
+       href="Laboratory4_DelaVega.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Exercises</p>
+        <p class="prev-next-title">Laboratory 4</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -585,9 +560,11 @@ dtype: torch.int64
     <i class="fa-solid fa-list"></i> Contents
   </div>
   <nav class="bd-toc-nav page-toc">
-    <ul class="simple visible nav section-nav flex-column">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objective"><strong>Objective</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#given-data"><strong>Given Data</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#result-summary"><strong>Result Summary</strong></a></li>
 </ul>
-
   </nav></div>
 
 </div></div>
