@@ -19,7 +19,8 @@ parts:
   - caption: Exercises
     chapters:
       - file: exercises/index
-
+        file: exercises/Exercises1_DelaVega
+        title: "Exercises 1"
 
   - caption: Projects
     chapters:
