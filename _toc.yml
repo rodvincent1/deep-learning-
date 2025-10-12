@@ -5,10 +5,16 @@ parts:
   - caption: Labs
     chapters:
       - file: labs/index
-      - file: labs/Laboratory5_DelaVega
-        title: "Laboratory 5"
-      - file: labs/Laboratory1
+      - file: labs/Laboratory1_DelaVega
         title: "Laboratory 1"
+      - file: labs/Laboratory2_DelaVega
+        title: "Laboratory 2"
+        file: labs/Laboratory3_DelaVega
+        title: "Laboratory 3"
+        file: labs/Laboratory4_DelaVega
+        title: "Laboratory 4"
+        file: labs/Laboratory5_DelaVega
+        title: "Laboratory 5"
 
   - caption: Exercises
     chapters:
