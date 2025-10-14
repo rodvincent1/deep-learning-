@@ -15,13 +15,13 @@ parts:
         title: "Laboratory 4"
       - file: labs/Laboratory5_DelaVega
         title: "Laboratory 5"
-        file: labs/Laboratory6_DelaVega
+      - file: labs/Laboratory6_DelaVega
         title: "Laboratory 6"
 
   - caption: Exercises
     chapters:
       - file: exercises/index
-        file: exercises/Exercises1_DelaVega
+      - file: exercises/Exercises1_DelaVega
         title: "Exercises 1"
 
   - caption: Projects
