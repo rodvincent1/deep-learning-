@@ -15,6 +15,8 @@ parts:
         title: "Laboratory 4"
       - file: labs/Laboratory5_DelaVega
         title: "Laboratory 5"
+        file: labs/Laboratory6_DelaVega
+        title: "Laboratory 6"
 
   - caption: Exercises
     chapters:
