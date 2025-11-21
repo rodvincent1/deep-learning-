@@ -28,3 +28,9 @@ parts:
     chapters:
       - file: projects/index
 
+  - caption: Blogs
+    chapters:
+      - file: blogs/index
+      - file: blogs/Homework_201
+        title: "Homework_201"
+
