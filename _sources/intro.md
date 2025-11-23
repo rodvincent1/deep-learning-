@@ -1,4 +1,4 @@
-# 🌐 Rod Vincent Dela Vega | Deep Learning Portfolio
+# Rod Vincent Dela Vega | Deep Learning Portfolio
 **BSDS – 4th Year**  
 *Exploring Deep Learning • Neural Networks • AI Experiments*
 
@@ -8,18 +8,18 @@
   <img src="https://img.icons8.com/?size=512&id=108784&format=png" width="120"/>
 </div>
 
-## ⚡ Welcome to My Deep Learning Portfolio
+## Welcome to My Deep Learning Portfolio
 This portfolio showcases my journey in **Deep Learning**, combining hands-on labs, exercises, projects, and personalized blog posts — all organized in a clean, interactive structure.
 
 ---
 
-# 🚀 Portfolio Sections
+# Portfolio Sections
 
 Below are visual, clickable cards that lead to each part of your portfolio.
 
 ---
 
-# 🧪 Labs  
+# Labs  
 Hands-on experiments and implementations of neural network concepts.
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 15px; margin-top: 15px;">
@@ -58,7 +58,7 @@ Hands-on experiments and implementations of neural network concepts.
 
 ---
 
-# 📘 Exercises  
+# Exercises  
 Short, focused tasks designed to reinforce deep learning foundations.
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 15px; margin-top: 15px;">
@@ -72,7 +72,7 @@ Short, focused tasks designed to reinforce deep learning foundations.
 
 ---
 
-# 🛠 Projects  
+# Projects  
 Major outputs demonstrating research, implementation, and real-world use of deep learning.
 
 <div style="background:#0d1117; padding:18px; border:1px solid #00eaff; border-radius:10px; text-decoration:none; color:#00eaff; width:260px;">
@@ -84,7 +84,7 @@ Major outputs demonstrating research, implementation, and real-world use of deep
 
 ---
 
-# ✍️ Blog Posts  
+# Blog Posts  
 
 <div style="background:#0d1117; padding:18px; border:1px solid #00eaff; border-radius:10px; text-decoration:none; color:#00eaff; width:260px;">
   <a href="blogs/Homework_201.html" style="color:#00eaff; text-decoration:none;">
@@ -95,7 +95,7 @@ Major outputs demonstrating research, implementation, and real-world use of deep
 
 ---
 
-# 🌟 About This Portfolio  
+# About This Portfolio  
 This portfolio is generated using **Jupyter Book**, updated automatically whenever new labs, exercises, or blogs are added.
 
 It is designed to be clean, professional, and visually modern — something you can proudly show for:
@@ -108,5 +108,5 @@ It is designed to be clean, professional, and visually modern — something you 
 ---
 
 <div style="text-align:center; padding:20px; color:#00eaff; font-size:14px;">
-Made with ❤️ by Rod Vincent Dela Vega | Neon Cyan Edition 🌙
+
 </div>
