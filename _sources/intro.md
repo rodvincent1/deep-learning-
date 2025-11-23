@@ -80,23 +80,11 @@ Major outputs demonstrating research, implementation, and real-world use of deep
 # Blog Posts  
 
 <div style="background:#0d1117; padding:18px; border:1px solid #00eaff; border-radius:10px; text-decoration:none; color:#00eaff; width:260px;">
-  <a href="blogs/Homework_201.html" style="color:#00eaff; text-decoration:none;">
+  <a href="blogs/Homework_201.html" style="color:#00eaff; text-decoration:none%;">
     <strong>Homework 201</strong><br>
     Portfolio Blog Entry
   </a>
 </div>
-
----
-
-# About This Portfolio  
-This portfolio is generated using **Jupyter Book**, updated automatically whenever new labs, exercises, or blogs are added.
-
-It is designed to be clean, professional, and visually modern — something you can proudly show for:
-
-- Internships  
-- Job applications  
-- Academic evaluations  
-- Personal branding  
 
 ---
 
