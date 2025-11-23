@@ -4,10 +4,6 @@
 
 ---
 
-<div style="text-align: center; padding: 20px 0;">
-  <img src="https://img.icons8.com/?size=512&id=108784&format=png" width="120"/>
-</div>
-
 ## Welcome to My Deep Learning Portfolio
 This portfolio showcases my journey in **Deep Learning**, combining hands-on labs, exercises, projects, and personalized blog posts — all organized in a clean, interactive structure.
 
