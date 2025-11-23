@@ -8,7 +8,6 @@ This portfolio showcases my journey in **Deep Learning**, combining hands-on lab
 ---
 
 # Portfolio Sections
-
 Below are visual, clickable cards that lead to each part of your portfolio.
 
 ---
@@ -101,5 +100,4 @@ It is designed to be clean, professional, and visually modern — something you 
 
 ---
 
-<div style="text-align:center; padding:20px; color:#00eaff; font-size:14px;">
-</div>
+<div style="text-align:center; padding:20px; color:#00eaff; font-size:14px;"></div>
