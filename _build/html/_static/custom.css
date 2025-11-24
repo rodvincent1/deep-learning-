@@ -1,0 +1,61 @@
+/* custom.css — modern palette, card styles, header, layout tweaks */
+:root{
+--bg: #0b1220; /* page background */
+--surface: #0f1724; /* content surface */
+--muted: #b6c2cc;
+--accent: #00eaff;
+--card: rgba(255,255,255,0.03);
+--glass: rgba(255,255,255,0.03);
+--left-sidebar: #071018;
+--toc-bg: #0f1724;
+}
+
+
+/* Light theme variables (toggle applies .light-theme to body) */
+body.light-theme{
+--bg: #f6f9fb;
+--surface: #ffffff;
+--muted: #374151;
+--accent: #0ea5a4;
+--card: rgba(15,23,42,0.03);
+--glass: rgba(255,255,255,0.6);
+--left-sidebar: #e6eef2;
+--toc-bg: #ffffff;
+}
+
+
+/* Smooth transitions for theme changes */
+html, body, .bd-content, .bd-sidebar, .bd-toc {
+transition: background-color 300ms ease, color 300ms ease, border-color 300ms ease;
+}
+
+
+/* Page background and content surface */
+body {
+background: var(--bg) !important;
+color: var(--muted) !important;
+}
+
+
+.bd-content {
+background: transparent !important; /* let page bg show through */
+padding: 2rem !important;
+}
+
+
+/* LEFT SIDEBAR */
+.bd-sidebar {
+background: linear-gradient(180deg, var(--left-sidebar), rgba(7,16,24,0.8)) !important;
+border-right: 1px solid rgba(255,255,255,0.03);
+}
+.bd-sidebar .nav-link, .bd-sidebar .toctree-l1, .bd-sidebar a {
+color: var(--muted) !important;
+}
+.bd-sidebar .nav-link.active {
+color: var(--accent) !important;
+border-left: 3px solid var(--accent);
+padding-left: calc(0.75rem - 3px);
+}
+
+
+.center-block{text-align:center}

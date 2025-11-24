@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div style="padding: 4rem; text-align:center;">
+    <h1 style="font-size: 3rem; color: white;">Deep Learning Portfolio</h1>
+    <p style="font-size: 1.3rem; color: #d1d5db;">
+        A modern, interactive portfolio showcasing labs, projects, and blog insights in Deep Learning.
+    </p>
+
+    <div style="
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 1.5rem;
+        margin-top: 3rem;
+    ">
+        <a href="labs/lab1.html" class="card">Labs</a>
+        <a href="exercises/exercise1.html" class="card">Exercises</a>
+        <a href="projects/" class="card">Projects</a>
+        <a href="blogs/" class="card">Blog Posts</a>
+    </div>
+</div>
+{% endblock %}

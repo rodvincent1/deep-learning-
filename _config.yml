@@ -1,6 +1,10 @@
-# Book settings
-title: "Deep Learning Portfolio"
-author: "Rod Vincent"
-logo: ""
-execute:
-  execute_notebooks: off   
+html:
+favicon: images/logo.png
+logo: images/logo.png
+extra_css:
+- _static/custom.css
+extra_js:
+- _static/theme-toggle.js
+use_repository_button: true
+use_issues_button: false
+use_download_button: true
